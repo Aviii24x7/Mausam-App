@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="UTF-8">
+    <title>
+        Mausam App
+    </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="city" placeholder="Enter City Name">
+        <button type="submit"> What's The Weather </button>
+    </form>
+    
+
+    {% if weather_data1 %}
+    <div class="city-container">
+        {% include 'weatherapp/weather.html' with weather_data=weather_data1 daily_forecasts=daily_forecasts1 %}
+    </div>
+    {% endif %}
+
+</body>
+</html>
+

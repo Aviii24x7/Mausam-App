@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Name Error</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333; /* Dark grey background color */
+            color: #fff; /* White text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .error-container {
+            padding: 20px;
+            border: 2px solid #f00;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: center;
+            background-color: #444; /* Dark grey background color for the error container */
+        }
+        .error-image {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Cool shadow effect */
+        }
+        .error-message {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #f00;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Cool text shadow effect */
+        }
+        h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <img src="{% static 'error_photo.png' %}" alt="Error Photo" class="error-image">
+        <h1>Place Not Found!!</h1>
+        <p class="error-message">Please Enter a Valid Place Name</p>
+        <p>if place exist, Recheck the spell!
+    </div>
+</body>
+</html>
